@@ -1,0 +1,325 @@
+/*Gör så bodyns storlek räknas sammanlagt med bordern */
+* {
+  box-sizing: border-box;
+}
+
+/*bestämmer utseende på header*/
+header {
+  background-image: url(images/mobilheader5.jpeg);
+  background-position: center;
+  background-color: #fcd5ceb5;
+  margin-bottom: 20px;
+}
+
+/*bestämmer storlek och plats för loggan*/
+.logga {
+  text-align: center;
+  margin: 2vw 1vh;
+  padding: 2vw 1vh;
+}
+
+/*bestämmer bakgrund och font på bodyn*/
+body {
+  background-image: url(images/tecknadsushi2.jpg);
+  background-attachment: fixed;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Sätter en wrapper och bestämmer utseende och storlek*/
+#wrapper {
+  max-width: 98%;
+  background-color: #f8edebc3;
+  text-align: center;
+  margin: auto;
+}
+
+/*länkmenyn högst upp på sidorna*/
+nav {
+  background-color: #f8edeb;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  overflow: hidden;
+}
+
+/*bestämmer hur styckena ska se ut*/
+article > section {
+  background-color: #e8e8e4c0;
+  width: 90%;
+  height: auto;
+  border: 10px;
+  margin: 25px auto;
+  border-radius: 25px;
+  padding: 30px;
+  text-align: left;
+  border: black 1px;
+}
+
+#index > section {
+  background-color: #e8e8e4c0;
+  width: 90%;
+  height: auto;
+  border: 10px;
+  margin: 25px auto;
+  border-radius: 25px;
+  padding: 30px;
+  text-align: left;
+  border: black 1px;
+}
+
+/*gör så texten hamnar centereat i paragraferna*/
+p {
+  text-align: center;
+}
+
+/**/
+.menu {
+  background-color: #e8e8e4c0;
+  width: 90%;
+  height: auto;
+  margin: 10px auto;
+}
+
+/*"snabbmenyn" som tar en till de olika rätterna på sidan*/
+#meny {
+  display: flex;
+  justify-content: left;
+  padding-left: 0;
+  font-size: smaller;
+}
+
+/*Menykknapp som endst syns på mobilskärm och tar en till matmenyn*/
+#menumeny {
+  display: flex;
+  position: sticky;
+  left: 5px;
+  top: 50px;
+}
+
+/*detaljerad lista*/
+dt {
+  font-weight: bold;
+  margin: 20px;
+}
+
+/*planerar aside stycket*/
+aside {
+  text-align: center;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+/*länk i aside*/
+aside > a {
+  padding: 0;
+}
+
+aside > p {
+  padding-left: 10px;
+}
+
+/*knappen som tar en högst upp på sidan*/
+#startknapp {
+  float: right;
+}
+
+span {
+  margin: auto;
+}
+
+/*bestämmer utseende och storlek på footern*/
+footer {
+  background-color: #fcd5ceb5;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/*placerar styckena i footern på varsin kant*/
+.container {
+  display: grid;
+  gap: 33%;
+  grid-template-columns: 33% 33%;
+}
+
+/*alla ruriker skrivs med versaler*/
+h1,
+h2,
+h3 {
+  font-variant: small-caps;
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
+
+/*bestämmer bildens storlek och border-utseende*/
+img {
+  max-width: 90%;
+  padding: 10px;
+}
+
+/*gör så det inte är punkter på listan*/
+ul {
+  list-style-type: none;
+}
+
+/*utseende på lista med länkar*/
+li a {
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/*ändrar bakgrundsfärg när man håller mus ovanför*/
+li a:hover {
+  background-color: #ece4db;
+  color: black;
+  font-style: oblique;
+}
+
+/*bestämmer länkars utseende*/
+a:link {
+  color: black;
+  background-color: #f8edeb;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 1.5vh 2vw;
+}
+
+/*bestämmer besökta länkars utseende*/
+a:visited {
+  color: black;
+  text-decoration: underline black;
+}
+
+/*bestämmer länkars utsennede när man håller musen ovanför dem*/
+a:hover {
+  color: #e8e8e4;
+  background-color: black;
+}
+
+/*bestämmer länk i footers utseende*/
+footer a:link {
+  padding: 0%;
+  color: black;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+/*bestämmer besökta footerlänkens utseende*/
+footer > a:visited {
+  color: black;
+  text-decoration: double black;
+}
+
+/*bestämmer footerlänkens utsennede när man håller musen ovanför den*/
+footer > a:hover {
+  color: #e8e8e4;
+  background-color: black;
+}
+
+/*Bestämmer utseende på länkarna till sociala medier när musen hovrar*/
+.socialmedia a:hover {
+  background-color: transparent;
+}
+
+/*lägger ta mig högst på sidan-knappen till vänster*/
+#left {
+  float: left;
+}
+
+@media screen and (min-width: 600px) {
+  /*nedan bestäms storlek på olika element när de är på desktop*/
+
+  #wrapper {
+    width: 99%;
+  }
+
+  header {
+    font-size: larger;
+    /* background-image: url(images/sushiheader.jpg); */
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: white;
+    min-height: 40vh;
+  }
+
+  footer {
+    font-size: large;
+    padding: 1vw;
+  }
+
+  article > section,
+  #index > section {
+    max-width: 70%;
+    height: auto;
+    border: 1px dotted black;
+  }
+
+  #menyknapp {
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  .menu {
+    height: auto;
+    border: 1px dotted black;
+    margin: 25px auto;
+    border-radius: 25px;
+  }
+
+  #index {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: auto;
+  }
+
+  /*:nth child nedan lägger de olika sekionerna på index-sidan lite omlott
+  #index > :nth-child(odd) {
+    margin-left: 5vw;
+    text-align: center;
+  }
+  #index > :nth-child(even) {
+    margin-right: 6vw;
+    text-align: center;
+  }*/
+
+  /*gör så mat-menyn lägger sig som en rad överst och följer med när man scrollar nedåt*/
+  #meny {
+    background-color: #f8edeb;
+    height: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 1px;
+    font-size: larger;
+  }
+
+  /*när skärmen är på desktop så ska inte den lilla meny-knappen på meny-sidan synas.*/
+  #menumeny {
+    display: none;
+  }
+
+  /*Lägger maträtterna i en grid*/
+  #menycontainer {
+    display: grid;
+    gap: 2px;
+    grid-auto-flow: row;
+    grid-template-columns: 4fr 4fr 4fr;
+  }
+
+  h2 {
+    margin-top: 10px;
+  }
+
+  .logga {
+    text-align: center;
+    margin: 1vh;
+    padding: 2vw 1vh;
+    width: 35vw;
+  }
+}
